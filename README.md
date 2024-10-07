@@ -75,7 +75,7 @@ Don't forget to explore our sibling project, [Open WebUI Community](https://open
 - **If Ollama is on your computer**, use this command:
 
   ```bash
-  docker run -d -p 3001:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+  docker run -d -p 3001:8080 -e WEBUI_AUTH=False -e ENABLE_SIGNUP=False --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
   ```
 
 - **If Ollama is on a Different Server**, use this command:
